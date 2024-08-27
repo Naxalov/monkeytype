@@ -7,7 +7,6 @@ def get_wpm_accuracy(username:str,time:int)->dict:
     response = requests.get(url)
     # Get the JSON data from the response
     data = response.json() 
-    print(username)
     time = data['data']['personalBests']['time'].get(str(time),0)
 
     if time == 0:
